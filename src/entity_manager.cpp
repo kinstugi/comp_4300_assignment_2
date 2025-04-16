@@ -3,7 +3,7 @@
 EntityManager::EntityManager(){}
 
 std::shared_ptr<Entity> EntityManager::addEntity(const std::string &tag){
-    auto entity = std::make_shared<Entity>(m_totalEntities++, tag);
+    auto entity = std::make_shared<Entity>(new Entity(m_totalEntities++, tag));
     m_toAdd.push_back(entity);
     return entity;
 }
@@ -27,5 +27,13 @@ void EntityManager::update(){
         return !entity->isActive();
     });
     m_entities.erase(it, m_entities.end());
+
+    for(auto &[tag, entities]: m_entityMap){
+        auto start = std::remove_if(entities.begin(), entities.end(), [](std::shared_ptr<Entity> entity){
+            return !entity->isActive();
+        });
+        entities.erase(start, entities.end());
+    }
+
     m_toAdd.clear();
 }

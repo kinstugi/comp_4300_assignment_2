@@ -11,13 +11,14 @@ class Entity{
     size_t m_id;
     CComponents m_components;
     
-public:
     Entity();
     Entity(size_t id, std::string tag = "");
 
+public:
     const std::string &tag() const;
     bool isActive() const;
     size_t getId() const;
+    void destroy();
 
     template <typename T>
     T& get();
@@ -33,4 +34,6 @@ public:
 
     template <typename T>
     void remove();
+
+    friend class EntityManager;
 };

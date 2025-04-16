@@ -43,3 +43,7 @@ template <typename T>
 void Entity::remove(){
     get<T>() = T();
 }
+
+void Entity::destroy(){
+    m_alive = false;
+}
