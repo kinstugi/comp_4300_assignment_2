@@ -1,14 +1,14 @@
-# Assignment 01 for COMP 4300 Course
+# Assignment 02 for COMP 4300 Course
 
 --------------------------------------
 ## About the course
-[Video Lectures on YouTube](https://www.youtube.com/playlist?list=PL_xRyXins848nDj2v-TJYahzvs-XW9sVV)
-COMP 4300 - C++ Game Programming (2022-09) by Dave Churchill
+<!-- [Video Lectures on YouTube](https://www.youtube.com/playlist?list=PL_xRyXins848nDj2v-TJYahzvs-XW9sVV) -->
+COMP 4300 - C++ Game Programming (2024-09) by Dave Churchill
 
 ## About the assignment
 
 For more information about assignment itsled, please read the 
-[ASSIGNMENT.md](ASSIGNMENT01.md) file.
+[ASSIGNMENT.md](ASSIGNMENT02.md) file.
 I made this assignment not in one file but split the code to different files.
 There was a code, it is in `initial_code.cpp` file, given by Dave as an example.
 It took me some time to get acquainted with SMFL library and ImGui as well to
